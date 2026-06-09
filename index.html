@@ -37,7 +37,7 @@
     .hero-inner{max-width:var(--hero-w);margin:0 auto;}
     .title{
       color:var(--ink);font-weight:600;
-      font-size:clamp(27px,4.4vw,42px);line-height:1.22;
+      font-size:clamp(26px,4vw,38px);line-height:1.25;text-wrap:balance;
       letter-spacing:-0.01em;margin:0 0 26px;
     }
     .authors{font-size:19px;color:var(--ink);margin:0 0 4px;font-weight:500;}
@@ -146,7 +146,7 @@
       <!-- assets/teaser.gif (or teaser.mp4) — a short representative reconstruction clip.
            STRIP metadata; verify no lab-identifying detail in any frame. -->
       <img src="assets/teaser.gif" alt="Representative floorplan-aware reconstruction under sparse range sensing.">
-      <p class="cap">Floorplan-aware reconstruction under sparse onboard range sensing: a 3D floorplan scaffolds both global alignment and implicit SDF mapping.</p>
+      <p class="cap">Floorplan-aware reconstruction under sparse onboard range sensing: a 3D floorplan serves as a structural reference for both global alignment and implicit SDF mapping.</p>
     </figure>
   </div>
 
@@ -156,11 +156,11 @@
   <section class="section">
     <div class="section-inner">
       <h2>Abstract</h2>
-      <div class="narrow abstract">
+      <div class="abstract">
         <p>Micro-quadrotors are well suited for confined indoor environments, but their strict payload constraints often limit onboard perception to sparse range sensing and lightweight onboard odometry. Sparse range returns provide limited geometric evidence, making room-scale structural consistency difficult to maintain from onboard measurements alone. Architectural floorplans provide complementary global structure, but using them for mapping requires aligning the local odometry frame to the floorplan and handling discrepancies between planned structure and observed geometry.</p>
-        <p>We present a floorplan-aware framework that uses a 3D floorplan as a structural scaffold for both global alignment and implicit signed distance field (SDF) mapping, allowing sparse observations to be interpreted within a shared structural coordinate frame. For global alignment, the framework estimates the local-to-world transform using a particle filter over a 2D floorplan SDF, combining sparse-beam likelihoods with candidate validation and recovery to reduce unsupported convergence and persistent tracking failure. For implicit mapping, it warm-starts an SDF field from a floorplan-derived 3D SDF and updates it online with conflict-aware supervision, balancing floorplan-consistent structure with measurement-supported local deviations.</p>
+        <p>We present FP-AIM, an integrated floorplan-aware system that uses a 3D floorplan as a structural reference for sparse-range local-to-world registration and floorplan-aware implicit SDF mapping. The alignment stage estimates the local-to-world transform using a particle filter over a 2D floorplan SDF, combining sparse-beam likelihoods with candidate verification and recovery to reduce unsupported convergence and persistent tracking failure. The mapping stage warm-starts an SDF field from a floorplan-derived 3D SDF and updates it online with conflict-aware supervision, balancing floorplan-consistent structure with measurement-supported local deviations.</p>
         <p>Experiments on simulation-generated indoor sequences demonstrate improved alignment reliability and reconstruction quality, and a qualitative real-world deployment shows coherent reconstruction under sparse range sensing.</p>
-        <p class="keywords"><b>Index Terms —</b> Micro-quadrotor, Sparse Range Sensing, Floorplan, Global Alignment, Implicit Mapping, Signed Distance Fields</p>
+        <p class="keywords"><b>Index Terms —</b> Micro-quadrotor, Sparse Range Sensing, Floorplan, Global Alignment, Implicit Mapping</p>
       </div>
     </div>
   </section>
@@ -177,7 +177,7 @@
         <div class="video-embed">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/w13p3N5IKjs?si=wuAnOkGReUniRg96" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <figcaption>High-resolution version of the submitted supplementary video. Full pipeline under sparse onboard range sensing and lightweight local odometry.</figcaption>
+        <figcaption>High-resolution version of the submitted supplementary video.</figcaption>
       </figure>
     </div>
   </section>
@@ -219,7 +219,7 @@
       <figure>
         <!-- assets/qualitative_sim.png — Fig. 4 simulation comparison (high resolution). -->
         <img src="assets/qualitative_sim.png" alt="Qualitative 3D reconstruction comparison on Rs_int, Merom_0_int, and Ihlen_0_int across baselines and the proposed method.">
-        <figcaption><b>Simulation comparison on Rs_int, Merom_0_int, and Ihlen_0_int.</b> Highlighted regions mark weakly constrained walls, ceilings, and nearby objects where sparse observations lead to over-smoothed or spatially spreading surfaces. The proposed method preserves room-scale structure while incorporating measurement-supported local deviations.</figcaption>
+        <figcaption><b>Simulation comparison on Rs_int, Merom_0_int, and Ihlen_0_int.</b> Highlighted regions mark weakly constrained walls, ceilings, and nearby objects where sparse observations lead to over-smoothed or spatially spreading surfaces. FP-AIM preserves room-scale structural consistency while incorporating measurement-supported local deviations.</figcaption>
       </figure>
     </div>
   </section>
