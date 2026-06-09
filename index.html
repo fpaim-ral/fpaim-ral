@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Keep the page out of search engines so the paper title cannot surface it and de-anonymize the authors during review. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Anonymous: no author, no affiliation, no analytics, no external account-linked embeds (no YouTube/Drive). -->
+  <title>Floorplan-Aware Alignment and Implicit Mapping for Sparse-Ranging Micro-Quadrotors</title>
+
+  <style>
+    :root{
+      --ink:#363636;
+      --body:#4a4a4a;
+      --muted:#7a7a7a;
+      --btn:#363636;
+      --btn-hover:#4f4f4f;
+      --line:#ededed;
+      --bg:#ffffff;
+      --hero-w:1000px;
+      --text-w:760px;
+    }
+    *{box-sizing:border-box;}
+    html{-webkit-text-size-adjust:100%;}
+    body{
+      margin:0;background:var(--bg);color:var(--body);
+      font-family:"Noto Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;font-size:17px;
+    }
+    a{color:#3273dc;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    /* ---------- Hero ---------- */
+    .hero{padding:70px 24px 28px;text-align:center;}
+    .hero-inner{max-width:var(--hero-w);margin:0 auto;}
+    .title{
+      color:var(--ink);font-weight:600;
+      font-size:clamp(27px,4.4vw,42px);line-height:1.22;
+      letter-spacing:-0.01em;margin:0 0 26px;
+    }
+    .authors{font-size:19px;color:var(--ink);margin:0 0 4px;font-weight:500;}
+    .affil{font-size:16px;color:var(--muted);margin:0 0 6px;}
+    .review-note{font-size:15px;color:var(--muted);margin:10px 0 0;font-style:italic;}
+
+    /* ---------- Link buttons ---------- */
+    .buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:30px 0 4px;}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--btn);color:#fff;font-size:15px;font-weight:500;
+      padding:9px 20px;border-radius:999px;line-height:1;
+      transition:background-color .15s ease;
+    }
+    .btn:hover{background:var(--btn-hover);text-decoration:none;}
+    .btn:focus-visible{outline:3px solid #9bb8e8;outline-offset:2px;}
+    .btn svg{width:17px;height:17px;fill:currentColor;flex:0 0 auto;}
+
+    /* ---------- Teaser ---------- */
+    .teaser{max-width:var(--hero-w);margin:40px auto 0;padding:0 24px;}
+    .teaser img,.teaser video{
+      width:100%;height:auto;display:block;border-radius:8px;
+      border:1px solid var(--line);background:#fafafa;
+    }
+    .teaser .cap{font-size:15px;color:var(--muted);margin-top:14px;text-align:center;font-style:italic;}
+
+    /* ---------- Sections ---------- */
+    .section{padding:50px 24px;}
+    .section-inner{max-width:var(--hero-w);margin:0 auto;}
+    .section h2{
+      color:var(--ink);font-weight:600;font-size:30px;
+      text-align:center;margin:0 0 26px;
+    }
+    .narrow{max-width:var(--text-w);margin:0 auto;}
+    .abstract p{margin:0 0 16px;text-align:justify;}
+    .keywords{font-size:15px;color:var(--muted);text-align:center;margin-top:22px;}
+    .keywords b{color:var(--ink);font-weight:600;}
+
+    /* ---------- Media blocks ---------- */
+    figure{margin:0;}
+    figure + figure{margin-top:34px;}
+    video.block,figure img{
+      width:100%;height:auto;display:block;border-radius:8px;
+      border:1px solid var(--line);background:#fafafa;
+    }
+    figcaption{font-size:15px;color:var(--muted);margin-top:14px;line-height:1.55;text-align:center;}
+    figcaption b{color:var(--ink);font-weight:600;}
+    .video-embed{position:relative;padding-top:56.25%;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#000;}
+    .video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+
+    /* ---------- BibTeX ---------- */
+    pre{
+      background:#f5f5f5;border:1px solid var(--line);border-radius:8px;
+      padding:18px 20px;overflow-x:auto;font-size:14px;line-height:1.5;
+      color:#444;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      max-width:var(--text-w);margin:0 auto;
+    }
+
+    /* ---------- Footer ---------- */
+    footer{padding:40px 24px 64px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line);}
+    footer p{margin:6px 0;}
+
+    .divider{border:none;border-top:1px solid var(--line);max-width:var(--hero-w);margin:0 auto;}
+
+    @media (max-width:600px){
+      body{font-size:16px;}
+      .hero{padding:48px 20px 24px;}
+      .section{padding:38px 20px;}
+      .section h2{font-size:25px;}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .btn{transition:none;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="title">Floorplan-Aware Alignment and Implicit Mapping<br>for Sparse-Ranging Micro-Quadrotors</h1>
+
+      <p class="authors">Anonymous Submission</p>
+      <p class="review-note">Paper under double-anonymous review</p>
+
+      <div class="buttons">
+        <!-- Paper PDF: place the anonymized submission at assets/paper.pdf (strip metadata / blank pdfauthor first). -->
+        <a class="btn" href="assets/paper.pdf">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0z"/></svg>
+          Paper
+        </a>
+        <a class="btn" href="#video">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+          Video
+        </a>
+        <!-- Code/Data links omitted during double-anonymous review (a group-named GitHub URL would de-anonymize).
+             Add in the camera-ready version, e.g.:
+             <a class="btn" href="https://github.com/your-org/your-repo">Code</a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEASER ============ -->
+  <div class="teaser">
+    <figure>
+      <!-- assets/teaser.gif (or teaser.mp4) — a short representative reconstruction clip.
+           STRIP metadata; verify no lab-identifying detail in any frame. -->
+      <img src="assets/teaser.gif" alt="Representative floorplan-aware reconstruction under sparse range sensing.">
+      <p class="cap">Floorplan-aware reconstruction under sparse onboard range sensing: a 3D floorplan scaffolds both global alignment and implicit SDF mapping.</p>
+    </figure>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ============ ABSTRACT ============ -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Abstract</h2>
+      <div class="narrow abstract">
+        <p>Micro-quadrotors are well suited for confined indoor environments, but their strict payload constraints often limit onboard perception to sparse range sensing and lightweight onboard odometry. Sparse range returns provide limited geometric evidence, making room-scale structural consistency difficult to maintain from onboard measurements alone. Architectural floorplans provide complementary global structure, but using them for mapping requires aligning the local odometry frame to the floorplan and handling discrepancies between planned structure and observed geometry.</p>
+        <p>We present a floorplan-aware framework that uses a 3D floorplan as a structural scaffold for both global alignment and implicit signed distance field (SDF) mapping, allowing sparse observations to be interpreted within a shared structural coordinate frame. For global alignment, the framework estimates the local-to-world transform using a particle filter over a 2D floorplan SDF, combining sparse-beam likelihoods with candidate validation and recovery to reduce unsupported convergence and persistent tracking failure. For implicit mapping, it warm-starts an SDF field from a floorplan-derived 3D SDF and updates it online with conflict-aware supervision, balancing floorplan-consistent structure with measurement-supported local deviations.</p>
+        <p>Experiments on simulation-generated indoor sequences demonstrate improved alignment reliability and reconstruction quality, and a qualitative real-world deployment shows coherent reconstruction under sparse range sensing.</p>
+        <p class="keywords"><b>Index Terms —</b> Micro-quadrotor, Sparse Range Sensing, Floorplan, Global Alignment, Implicit Mapping, Signed Distance Fields</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ VIDEO ============ -->
+  <section class="section" id="video">
+    <div class="section-inner">
+      <h2>Supplementary Video</h2>
+      <figure>
+        <!-- Unlisted YouTube on a THROWAWAY channel (no real name/handle, no other videos), via nocookie.
+             Replace VIDEO_ID with your unlisted video's ID (the part after watch?v= or youtu.be/). -->
+        <div class="video-embed">
+          <iframe src="https://youtu.be/w13p3N5IKjs"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen title="Supplementary video"></iframe>
+        </div>
+        <figcaption>High-resolution version of the submitted supplementary video. Full pipeline under sparse onboard range sensing and lightweight local odometry.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ METHOD ============ -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Method Overview</h2>
+      <figure>
+        <!-- assets/method_overview.png — Fig. 2 pipeline (high resolution). -->
+        <img src="assets/method_overview.png" alt="Two-stage floorplan-aware framework: Stage 1 global alignment and Stage 2 implicit mapping.">
+        <figcaption><b>Two-stage framework.</b> Stage 1 estimates the local-to-world alignment from sparse range observations, local odometry increments, and a 2D floorplan SDF. Stage 2 warm-starts an implicit SDF from the floorplan-derived structural field and refines it online with sparse measurements and conflict-aware supervision.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ REAL-WORLD ============ -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Real-World Deployment</h2>
+      <figure>
+        <!-- assets/realworld_m09.png — Fig. 1 real-world M09 (high resolution). -->
+        <img src="assets/realworld_m09.png" alt="Qualitative real-world reconstruction in the M09 scene using a Crazyflie with Flow-deck odometry and sparse Multi-ranger measurements.">
+        <figcaption><b>Real-world M09 scene.</b> Using a Crazyflie equipped with Flow-deck local odometry and sparse Multi-ranger measurements, the framework produces coherent room-scale reconstruction under real sparse range sensing.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ QUALITATIVE ============ -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Qualitative Reconstruction Results</h2>
+      <figure>
+        <!-- assets/qualitative_sim.png — Fig. 4 simulation comparison (high resolution). -->
+        <img src="assets/qualitative_sim.png" alt="Qualitative 3D reconstruction comparison on Rs_int, Merom_0_int, and Ihlen_0_int across baselines and the proposed method.">
+        <figcaption><b>Simulation comparison on Rs_int, Merom_0_int, and Ihlen_0_int.</b> Highlighted regions mark weakly constrained walls, ceilings, and nearby objects where sparse observations lead to over-smoothed or spatially spreading surfaces. The proposed method preserves room-scale structure while incorporating measurement-supported local deviations.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ BIBTEX ============ -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>BibTeX</h2>
+      <pre>% Citation withheld during double-anonymous review.
+% The BibTeX entry will be added in the camera-ready version.</pre>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p>Anonymous submission. All author- and institution-identifying information has been removed for double-anonymous review.</p>
+    <p>This page uses the project page template by <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+  </footer>
+
+</body>
+</html>
