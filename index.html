@@ -88,6 +88,10 @@
     .video-embed{position:relative;padding-top:56.25%;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#000;}
     .video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
 
+    /* ---------- Code ---------- */
+    .code-note{max-width:var(--text-w);margin:0 auto;text-align:center;}
+    .code-note p{margin:0;}
+
     /* ---------- BibTeX ---------- */
     pre{
       background:#f5f5f5;border:1px solid var(--line);border-radius:8px;
@@ -133,8 +137,12 @@
           <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
           Video
         </a>
+        <a class="btn" href="#code">
+          <svg viewBox="0 0 640 512" aria-hidden="true"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zM480 96c-12.5 12.5-12.5 32.8 0 45.3L538.7 200 480 258.7c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l80-80c12.5-12.5 12.5-32.8 0-45.3l-80-80c-12.5-12.5-32.8-12.5-45.3 0zm-320 0c-12.5-12.5-32.8-12.5-45.3 0l-80 80c-12.5 12.5-12.5 32.8 0 45.3l80 80c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L101.3 200 160 141.3c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+          Code
+        </a>
         <!-- Code/Data links omitted during double-anonymous review (a group-named GitHub URL would de-anonymize).
-             Add in the camera-ready version, e.g.:
+             Add the repository link in the camera-ready version, e.g.:
              <a class="btn" href="https://github.com/your-org/your-repo">Code</a> -->
       </div>
     </div>
@@ -175,7 +183,7 @@
         <!-- Unlisted YouTube on a THROWAWAY channel (no real name/handle, no other videos), via nocookie.
              Replace VIDEO_ID with your unlisted video's ID (the part after watch?v= or youtu.be/). -->
         <div class="video-embed">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/AuesWm1owcE?si=9ZX3vbJy3GnD6hTW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dGV3IJG0hUM?si=9az3P-KGKOg-atPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <figcaption>High-resolution version of the submitted supplementary video.</figcaption>
       </figure>
@@ -221,6 +229,18 @@
         <img src="assets/qualitative_sim.png" alt="Qualitative 3D reconstruction comparison on Rs_int, Merom_0_int, and Ihlen_0_int across baselines and the proposed method.">
         <figcaption><b>Simulation comparison on Rs_int, Merom_0_int, and Ihlen_0_int.</b> Highlighted regions mark weakly constrained walls, ceilings, and nearby objects where sparse observations lead to over-smoothed or spatially spreading surfaces. FP-AIM preserves room-scale structural consistency while incorporating measurement-supported local deviations.</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ============ CODE ============ -->
+  <section class="section" id="code">
+    <div class="section-inner">
+      <h2>Code</h2>
+      <div class="code-note">
+        <p>The source code will be released publicly upon acceptance. The repository link will be added here in the camera-ready version.</p>
+      </div>
     </div>
   </section>
 
