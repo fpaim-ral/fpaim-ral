@@ -199,7 +199,7 @@
       <figure>
         <!-- assets/method_overview.png — Fig. 2 pipeline (high resolution). -->
         <img src="assets/method_overview.png" alt="Two-stage floorplan-aware framework: Stage 1 global alignment and Stage 2 implicit mapping.">
-        <figcaption><b>Two-stage framework.</b> Stage 1 estimates the local-to-world alignment from sparse range observations, local odometry increments, and a 2D floorplan SDF. Stage 2 warm-starts an implicit SDF from the floorplan-derived structural field and refines it online with sparse measurements and conflict-aware supervision.</figcaption>
+        <figcaption><b>Two-stage framework.</b> Overview of FP-AIM. Stage 1 estimates the local-to-world transform from sparse range observations, local odometry increments, and a 2D floorplan SDF. Stage 2 uses the estimated transform to warm-start an implicit SDF from a floorplan-derived 3D SDF and refines it online with sparse measurements and conflict-aware supervision.</figcaption>
       </figure>
     </div>
   </section>
@@ -213,7 +213,7 @@
       <figure>
         <!-- assets/realworld_m09.png — Fig. 1 real-world M09 (high resolution). -->
         <img src="assets/realworld_m09.png" alt="Qualitative real-world reconstruction in the M09 scene using a Crazyflie with Flow-deck odometry and sparse Multi-ranger measurements.">
-        <figcaption><b>Real-world M09 scene.</b> Using a Crazyflie equipped with Flow-deck local odometry and sparse Multi-ranger measurements, the framework produces coherent room-scale reconstruction under real sparse range sensing.</figcaption>
+        <figcaption><b>Real-world M09 scene.</b> Qualitative results in the real-world M09 scene. Using a Crazyflie equipped with Flow-deck local odometry and sparse Multi-ranger measurements, FP-AIM establishes a consistent floorplan-aligned frame and reconstructs coherent room-scale geometry, while LGSDF [4] exhibits fragmented surfaces and local deformation under sparse range sensing.</figcaption>
       </figure>
     </div>
   </section>
@@ -227,7 +227,7 @@
       <figure>
         <!-- assets/qualitative_sim.png — Fig. 4 simulation comparison (high resolution). -->
         <img src="assets/qualitative_sim.png" alt="Qualitative 3D reconstruction comparison on Rs_int, Merom_0_int, and Ihlen_0_int across baselines and the proposed method.">
-        <figcaption><b>Simulation comparison on Rs_int, Merom_0_int, and Ihlen_0_int.</b> Highlighted regions mark weakly constrained walls, ceilings, and nearby objects where sparse observations lead to over-smoothed or spatially spreading surfaces. FP-AIM preserves room-scale structural consistency while incorporating measurement-supported local deviations.</figcaption>
+        <figcaption><b>Simulation comparison on Rs_int, Merom_0_int, and Ihlen_0_int.</b> Qualitative reconstruction comparison on Rs_int, Merom_0_int, and Ihlen_0_int. Red boxes mark sparsely observed wall, ceiling, and object-adjacent regions. FP-AIM preserves room-scale structural consistency and measurement-supported local deviations.</figcaption>
       </figure>
     </div>
   </section>
